@@ -70,8 +70,8 @@ module Raddocs
     end
 
     helpers do
-      def link_to(name, link)
-        %{<a href="#{url_location}#{link}">#{name}</a>}
+      def link_to(name, link, options={})
+        %{<a href="#{url_location}#{link}" class="#{options['class']}">#{name}</a>}
       end
 
       def url_location
@@ -112,6 +112,7 @@ module Raddocs
         Raddocs.configuration.docs_dir
       end
 
+<<<<<<< HEAD
       def guides
         return [] unless File.exist?(guides_index)
         YAML.load(File.read(guides_index)).map do |guide_hash|
@@ -125,6 +126,10 @@ module Raddocs
 
       def guides_dir
         Raddocs.configuration.guides_dir
+      end
+      
+      def index_view
+        Raddocs.configuration.index_view
       end
     end
   end
