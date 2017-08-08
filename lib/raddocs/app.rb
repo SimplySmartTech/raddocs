@@ -112,7 +112,6 @@ module Raddocs
         Raddocs.configuration.docs_dir
       end
 
-<<<<<<< HEAD
       def guides
         return [] unless File.exist?(guides_index)
         YAML.load(File.read(guides_index)).map do |guide_hash|
@@ -127,7 +126,7 @@ module Raddocs
       def guides_dir
         Raddocs.configuration.guides_dir
       end
-      
+
       def index_view
         Raddocs.configuration.index_view
       end
